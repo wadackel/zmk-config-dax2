@@ -136,7 +136,7 @@
             bindings = <
 &trans  &trans  &trans                      &kp LA(LC(LG(K)))         &kp LA(LC(LG(M)))     &trans                 &trans       &trans           &trans  &trans  &trans  &trans
 &trans  &trans  &kp LA(LC(LG(LEFT_ARROW)))  &kp LA(LC(LG(UP_ARROW)))  &kp LA(LC(LG(DOWN)))  &kp LA(LC(LG(RIGHT)))  &trans       &trans           &trans  &trans  &trans  &trans
-&trans  &trans  &kp LA(LC(LG(N1)))          &kp LA(LC(LG(N2)))        &kp LA(LC(LG(N3)))    &kp LA(LC(LG(N4)))     &trans       &trans           &trans  &trans  &trans  &trans
+&trans  &trans  &kp LA(LC(LG(N1)))          &kp LA(LC(LG(N2)))        &kp LA(LC(LG(N3)))    &kp LA(LC(LG(N4)))     &trans       &trans           &trans  &trans  &trans  &to 0
         &trans  &trans                      &trans                    &trans                &trans                 &kp LC(TAB)  &kp LS(LC(TAB))
             >;
         };

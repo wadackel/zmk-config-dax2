@@ -40,6 +40,24 @@
             key-positions = <20 21>;
             layers = <4>;
         };
+
+        left_click {
+            bindings = <&mkp MB1>;
+            key-positions = <19 20>;
+            layers = <0>;
+        };
+
+        right_click {
+            bindings = <&mkp MB2>;
+            key-positions = <20 21>;
+            layers = <0>;
+        };
+
+        middle_click {
+            bindings = <&mkp MB3>;
+            key-positions = <8 9>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -69,8 +87,8 @@
 
         default_layer {
             bindings = <
-&kp TAB         &kp Q  &kp W         &kp E               &kp R                 &kp T                      &kp Y        &kp U        &kp I        &kp O    &kp P            &kp MINUS
-&kp LCTRL       &kp A  &kp S         &kp D               &kp F                 &kp G                      &kp H        &kp J        &kp K        &kp L    &lt 4 SEMICOLON  &lt 5 SINGLE_QUOTE
+&kp TAB         &kp Q  &kp W         &kp E               &kp R                 &kp T                      &kp Y        &kp U        &kp I        &lt 5 O  &kp P            &kp MINUS
+&kp LCTRL       &kp A  &kp S         &kp D               &kp F                 &kp G                      &kp H        &kp J        &kp K        &kp L    &lt 4 SEMICOLON  &kp SINGLE_QUOTE
 &kp LEFT_SHIFT  &kp Z  &kp X         &kp C               &kp V                 &kp B                      &kp N        &kp M        &lt 5 COMMA  &kp DOT  &kp SLASH        &to 4
                 &mo 5  &kp LEFT_ALT  &mt LEFT_GUI LANG2  &mt LEFT_SHIFT SPACE  &esc_lang2_with_layer 3 0  &lt 2 ENTER  &lt 1 LANG1
             >;

@@ -89,7 +89,7 @@
             bindings = <
 &kp TAB         &kp Q  &kp W         &kp E               &kp R                 &kp T                      &kp Y        &kp U        &kp I        &lt 5 O  &kp P            &kp MINUS
 &kp LCTRL       &kp A  &kp S         &kp D               &kp F                 &kp G                      &kp H        &kp J        &kp K        &kp L    &lt 4 SEMICOLON  &kp SINGLE_QUOTE
-&kp LEFT_SHIFT  &kp Z  &kp X         &kp C               &kp V                 &kp B                      &kp N        &kp M        &lt 5 COMMA  &kp DOT  &kp SLASH        &to 4
+&kp LEFT_SHIFT  &kp Z  &kp X         &kp C               &kp V                 &kp B                      &kp N        &kp M        &lt 5 COMMA  &kp DOT  &kp SLASH        &to 5
                 &mo 5  &kp LEFT_ALT  &mt LEFT_GUI LANG2  &mt LEFT_SHIFT SPACE  &esc_lang2_with_layer 3 0  &lt 2 ENTER  &lt 1 LANG1
             >;
 

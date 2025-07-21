@@ -95,10 +95,10 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &kp F11           &kp LG(R)                 &mkp MB3                   &mkp MB2          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LC(UP_ARROW)  &mkp MB1                  &kp LG(DOWN)               &kp LG(UP_ARROW)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LC(DOWN)      &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &kp LG(W)         &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &mkp MB4          &mkp MB5
+&trans  &trans  &trans  &trans  &trans  &trans  &kp F11                   &kp LG(R)                  &kp LG(DOWN)               &kp LG(UP_ARROW)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LC(UP_ARROW)          &mkp MB1                   &mkp MB3                   &mkp MB2          &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LC(DOWN)              &kp LG(LS(LEFT_BRACKET))   &kp LG(LS(RIGHT_BRACKET))  &kp LG(W)         &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))
             >;
         };
 

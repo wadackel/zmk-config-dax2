@@ -28,6 +28,11 @@
             key-positions = <0 29>;
             layers = <0>;
         };
+
+        kj_scroll {
+            bindings = <&mo 5>;
+            key-positions = <20 21>;
+        };
     };
 
     macros {

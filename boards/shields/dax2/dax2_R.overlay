@@ -1,4 +1,6 @@
 #include "dax2.dtsi"
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input-transform.h>
 
 &xiao_serial {
   status = "disabled";
@@ -22,6 +24,17 @@
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
+
+    // レイヤー5でスクロールモード
+    scroller {
+      layers = <5>;
+      input-processors = <
+        &zip_xy_transform (INPUT_TRANSFORM_X_INVERT)  // X軸反転
+        &zip_xy_scaler 1 8                             // XYを1/8に減速
+        &zip_xy_to_scroll_mapper                       // XY→スクロール変換
+        &zip_scroll_scaler 1 8                         // スクロールを1/8に減速（合計1/64）
+      >;
+    };
   };
 };
 
@@ -54,11 +67,14 @@
 
   trackball: trackball@0 {
     status = "okay";
-    compatible = "pixart,pmw3610";
+    compatible = "pixart,pmw3610-alt";  // badjeff版のcompatible
     reg = <0>;
     spi-max-frequency = <2000000>;
     irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Motion
 
-    scroll-layers = <5>;
+    // badjeff版の設定
+    cpi = <800>;           // CPI設定（デバイスツリーへ移行）
+    invert-x;              // X軸反転
+    invert-y;              // Y軸反転（180度回転）
   };
 };

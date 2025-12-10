@@ -30,6 +30,7 @@
     scroller {
       layers = <5>;
       input-processors = <
+        &zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)  // スクロール時Y軸反転（デバイスの反転を打ち消す）
         &zip_xy_scaler 1 8                             // XYを1/8に減速
         &zip_xy_to_scroll_mapper                       // XY→スクロール変換
         &zip_scroll_scaler 1 8                         // スクロールを1/8に減速（合計1/64）

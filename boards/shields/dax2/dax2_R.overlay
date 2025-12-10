@@ -1,6 +1,7 @@
 #include "dax2.dtsi"
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &xiao_serial {
   status = "disabled";
@@ -76,5 +77,10 @@
     cpi = <800>;           // CPI設定（デバイスツリーへ移行）
     invert-x;              // X軸反転
     invert-y;              // Y軸反転（180度回転）
+
+    // 必須プロパティ
+    evt-type = <INPUT_EV_REL>;
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
   };
 };

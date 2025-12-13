@@ -28,6 +28,11 @@
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
+
+    scroller {
+      layers = <5>;  // SCROLL layer
+      input-processors = <&zip_xy_to_scroll_mapper>;
+    };
   };
 };
 

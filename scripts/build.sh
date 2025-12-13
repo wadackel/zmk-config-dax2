@@ -17,7 +17,7 @@ docker-compose run --rm zmk bash -c "
   set -e
   $ZEPHYR_ENV
   echo 'Building: dax2_R'
-  west build -s zmk/app -b xiao_ble -d build/dax2_R -- \
+  west build -s zmk/app -b seeeduino_xiao_ble -d build/dax2_R -- \
     -DBOARD_ROOT=/workspace \
     -DSHIELD='dax2_R;rgbled_adapter' \
     -DSNIPPET=studio-rpc-usb-uart \
@@ -33,7 +33,7 @@ docker-compose run --rm zmk bash -c "
   set -e
   $ZEPHYR_ENV
   echo 'Building: dax2_L'
-  west build -s zmk/app -b xiao_ble -d build/dax2_L -- \
+  west build -s zmk/app -b seeeduino_xiao_ble -d build/dax2_L -- \
     -DBOARD_ROOT=/workspace \
     -DSHIELD='dax2_L;rgbled_adapter' \
     -DZMK_CONFIG=/workspace/config \
@@ -48,7 +48,7 @@ docker-compose run --rm zmk bash -c "
   set -e
   $ZEPHYR_ENV
   echo 'Building: settings_reset'
-  west build -s zmk/app -b xiao_ble -d build/settings_reset -- \
+  west build -s zmk/app -b seeeduino_xiao_ble -d build/settings_reset -- \
     -DBOARD_ROOT=/workspace \
     -DSHIELD=settings_reset \
     -DZMK_CONFIG=/workspace/config \

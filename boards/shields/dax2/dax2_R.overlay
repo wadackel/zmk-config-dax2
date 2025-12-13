@@ -1,11 +1,4 @@
 #include "dax2.dtsi"
-#include <dt-bindings/input/input-event-codes.h>
-#include <dt-bindings/zmk/input_transform.h>
-
-// NFC ピンを GPIO として使用（Zephyr 4.1 の新方式）
-&uicr {
-  nfct-pins-as-gpios;
-};
 
 &xiao_serial {
   status = "disabled";
@@ -29,17 +22,6 @@
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
-
-    // 通常モード用（全レイヤー）: 1.25倍速
-    input-processors = <&zip_xy_scaler 5 4>;
-
-    scroller {
-      layers = <5>;  // SCROLL layer
-      input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-                         <&zip_xy_scaler 1 16>,
-                         <&zip_xy_scaler 1 4>,
-                         <&zip_xy_to_scroll_mapper>;
-    };
   };
 };
 
@@ -72,17 +54,11 @@
 
   trackball: trackball@0 {
     status = "okay";
-    compatible = "pixart,pmw3610-alt";
+    compatible = "pixart,pmw3610";
     reg = <0>;
     spi-max-frequency = <2000000>;
     irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Motion
 
-    // デバイスツリープロパティで設定（badjeff 版）
-    evt-type = <INPUT_EV_REL>;
-    x-input-code = <INPUT_REL_X>;
-    y-input-code = <INPUT_REL_Y>;
-    cpi = <800>;
-    invert-y;
-    force-awake;
+    scroll-layers = <5>;
   };
 };

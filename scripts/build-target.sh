@@ -40,7 +40,7 @@ docker-compose run --rm zmk bash -c "
     SNIPPET_FLAG='-DSNIPPET=$SNIPPET'
   fi
 
-  west build -s zmk/app -b xiao_ble -d build/$TARGET -- \
+  west build -s zmk/app -b seeeduino_xiao_ble -d build/$TARGET -- \
     -DBOARD_ROOT=/workspace \
     -DSHIELD='$SHIELD' \
     \$SNIPPET_FLAG \

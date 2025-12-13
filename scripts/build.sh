@@ -19,7 +19,8 @@ docker-compose run --rm zmk bash -c "
     -DSHIELD='dax2_R;rgbled_adapter' \
     -DSNIPPET=studio-rpc-usb-uart \
     -DZMK_CONFIG=/workspace/config \
-    -DCMAKE_PREFIX_PATH='/workspace/zephyr/share/zephyr-package/cmake;/opt/zephyr-sdk-0.16.9/cmake'
+    -DCMAKE_PREFIX_PATH='/workspace/zephyr/share/zephyr-package/cmake;/opt/zephyr-sdk-0.16.9/cmake' \
+    -DCMAKE_BUILD_PARALLEL_LEVEL=4
 
   # Target 2: dax2_L (left hand)
   echo 'Building: dax2_L'
@@ -27,7 +28,8 @@ docker-compose run --rm zmk bash -c "
     -DBOARD_ROOT=/workspace \
     -DSHIELD='dax2_L;rgbled_adapter' \
     -DZMK_CONFIG=/workspace/config \
-    -DCMAKE_PREFIX_PATH='/workspace/zephyr/share/zephyr-package/cmake;/opt/zephyr-sdk-0.16.9/cmake'
+    -DCMAKE_PREFIX_PATH='/workspace/zephyr/share/zephyr-package/cmake;/opt/zephyr-sdk-0.16.9/cmake' \
+    -DCMAKE_BUILD_PARALLEL_LEVEL=4
 
   # Target 3: settings_reset
   echo 'Building: settings_reset'
@@ -35,7 +37,8 @@ docker-compose run --rm zmk bash -c "
     -DBOARD_ROOT=/workspace \
     -DSHIELD=settings_reset \
     -DZMK_CONFIG=/workspace/config \
-    -DCMAKE_PREFIX_PATH='/workspace/zephyr/share/zephyr-package/cmake;/opt/zephyr-sdk-0.16.9/cmake'
+    -DCMAKE_PREFIX_PATH='/workspace/zephyr/share/zephyr-package/cmake;/opt/zephyr-sdk-0.16.9/cmake' \
+    -DCMAKE_BUILD_PARALLEL_LEVEL=4
 
   # Copy UF2 files to build root for easier access
   cp build/dax2_R/zephyr/zmk.uf2 build/dax2_R.uf2

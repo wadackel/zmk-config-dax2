@@ -10,6 +10,10 @@ setup:
 build:
     @bash scripts/build.sh
 
+# Build all targets in parallel (Phase 3: ~70% faster than baseline)
+build-parallel:
+    @bash scripts/build-parallel.sh
+
 # Build specific target (e.g., just build-target dax2_R)
 build-target TARGET="dax2_R":
     @bash scripts/build-target.sh {{TARGET}}

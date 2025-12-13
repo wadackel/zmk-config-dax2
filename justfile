@@ -6,13 +6,13 @@ default:
 setup:
     @bash scripts/setup.sh
 
-# Build all targets (dax2_R, dax2_L, settings_reset)
+# Build all targets in parallel (default, ~70% faster than baseline)
 build:
     @bash scripts/build.sh
 
-# Build all targets in parallel (Phase 3: ~70% faster than baseline)
-build-parallel:
-    @bash scripts/build-parallel.sh
+# Build all targets sequentially (useful for debugging build errors)
+build-sequential:
+    @bash scripts/build-sequential.sh
 
 # Build specific target (e.g., just build-target dax2_R)
 build-target TARGET="dax2_R":

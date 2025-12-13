@@ -1,0 +1,4 @@
+name: dax2
+build:
+  settings:
+    board_root: .

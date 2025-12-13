@@ -2,7 +2,8 @@
 build/
 .west/
 modules/
-zephyr/
+zephyr/*
+!zephyr/module.yml
 zmk/
 zmk-pmw3610-driver/
 zmk-rgbled-widget/
